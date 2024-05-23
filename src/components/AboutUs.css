@@ -1,0 +1,39 @@
+/* Typewriter effect styles */
+h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.08em;
+    position: relative;
+  }
+  
+  span.cursor {
+    display: inline-block;
+    position: relative;
+    width: 1px;
+    height: 1em;
+    background-color: orange;
+  }
+  
+  span.cursor::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+  
+  
